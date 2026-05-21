@@ -1,0 +1,17 @@
+'Alejandro Calgua Pinetta
+'4to Baco b
+
+GraphicsWindow.BackgroundColor = "cyan"
+
+Turtle.Turn(54)
+
+  Turtle.Move(100)
+  Turtle.Turn(72)
+  Turtle.Move(100)
+  Turtle.Turn(72)
+  Turtle.Move(100)
+  Turtle.Turn(72)
+  Turtle.Move(100)
+  Turtle.Turn(72)
+  Turtle.Move(100)
+  Turtle.Turn(72)
