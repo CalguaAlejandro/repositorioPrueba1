@@ -1,0 +1,271 @@
+'Alejandro Calgua Pinetta
+'4to Baco B
+
+'Tamano ventana
+GraphicsWindow.Width = 320
+GraphicsWindow.Height = 505
+
+'Color de fondo
+GraphicsWindow.BackgroundColor = "gray"
+
+'Boton maximisar
+GraphicsWindow.CanResize = "No"
+
+'Borde del teclado
+GraphicsWindow.PenColor = "blue"
+GraphicsWindow.DrawRectangle(30,150,260,325)
+
+'Borde exterior
+GraphicsWindow.DrawRectangle(15,15,290,480)
+
+'Visor
+caja = Controls.AddTextBox(42,65)
+Controls.SetSize(caja,235,50)
+
+'Botones
+siete = Controls.AddButton("7",50,260)
+Controls.SetSize(siete,45,45)
+ocho = Controls.AddButton("8",100,260)
+Controls.SetSize(ocho,45,45)
+nueve = Controls.AddButton("9",150,260)
+Controls.SetSize(nueve,45,45)
+cuatro = Controls.AddButton("4",50,310)
+Controls.SetSize(cuatro,45,45)
+cinco = Controls.AddButton("5",100,310)
+Controls.SetSize(cinco,45,45)
+seis = Controls.AddButton("6",150,310)
+Controls.SetSize(seis,45,45)
+uno = Controls.AddButton("1",50,360)
+Controls.SetSize(uno,45,45)
+dos = Controls.AddButton("2",100,360)
+Controls.SetSize(dos,45,45)
+tres = Controls.AddButton("3",150,360)
+Controls.SetSize(tres,45,45)
+masmenos = Controls.AddButton("+/-",50,410)
+Controls.SetSize(masmenos,45,45)
+cero = Controls.AddButton("0",100,410)
+Controls.SetSize(cero,45,45)
+punto = Controls.AddButton(".",150,410)
+Controls.SetSize(punto,45,45)
+menos = Controls.AddButton("-",200,310)
+Controls.SetSize(menos,45,45)
+mas = Controls.AddButton("+",200,360)
+Controls.SetSize(mas,45,45)
+dividir = Controls.AddButton("/",200,210)
+Controls.SetSize(dividir,45,45)
+por = Controls.AddButton("*",200,260)
+Controls.SetSize(por,45,45)
+ce =Controls.AddButton("CE",100,160)
+Controls.SetSize(ce,45,45)
+porcentaje = Controls.AddButton("%",50,160)
+Controls.SetSize(porcentaje,45,45)
+igual = Controls.AddButton("=",200,410)
+Controls.SetSize(igual,45,45)
+borrar = Controls.AddButton("⌫",200,160)
+Controls.SetSize(borrar,45,45)
+dividido = Controls.AddButton("1/x"50,210)
+Controls.SetSize(dividido,45,45)
+alcuadrado = Controls.AddButton("x²"100,210)
+Controls.SetSize(alcuadrado,45,45)
+raizcuadrada = Controls.AddButton("²√x",150,210)
+Controls.SetSize(raizcuadrada,45,45)
+
+limpiar = Controls.AddButton("C",150,160)
+Controls.SetSize(limpiar,45,45)
+
+'evento boton
+Controls.ButtonClicked = boton
+
+'variable auxiliar
+operadorSuma = 0
+operadorResta = 0
+operadorMultiplicacion = 0
+operadorDivison = 0
+
+'condicion boton
+Sub boton
+  ultimo_boton = Controls.LastClickedButton
+  If ultimo_boton = uno Then
+    boton1()
+  ElseIf ultimo_boton = dos then
+    boton2()
+  elseif ultimo_boton = tres then
+    boton3()
+  elseif ultimo_boton = cuatro then
+    boton4()
+  elseif ultimo_boton= cinco then
+    boton5()
+  elseif ultimo_boton = seis then
+    boton6()
+  elseif ultimo_boton = siete then
+    boton7()
+  elseif ultimo_boton = ocho then
+    boton8()
+  elseif ultimo_boton = nueve then
+    boton9()
+  elseif ultimo_boton = cero then
+    boton0()
+  elseif ultimo_boton = punto then
+    boton11()
+  elseif ultimo_boton = limpiar then
+    botonlimpiar()
+  elseif ultimo_boton = mas then
+    botonMas()
+  elseif ultimo_boton = menos then
+    botonMenos()
+  elseif ultimo_boton = por then
+    botonPor()
+  elseif ultimo_boton = dividir then
+    botonDividir()
+  elseif ultimo_boton = alcuadrado then
+    botonCuadrado()
+  EndIf
+EndSub
+
+'subrutonas del boton numero
+Sub boton1
+  contenido_caja = Controls.GetTextBoxText(caja)
+  numero = "1"
+  Controls.SetTextBoxText(caja,Text.Append(contenido_caja,numero))
+EndSub
+Sub boton2
+  contenido_caja = Controls.GetTextBoxText(caja)
+  numero = "2"
+  Controls.SetTextBoxText(caja, Text.Append(contenido_caja,numero))
+EndSub
+Sub boton3
+  contenido_caja = Controls.GetTextBoxText(caja)
+  numero = "3"
+  Controls.SetTextBoxText(caja, Text.Append(contenido_caja,numero))
+EndSub
+Sub boton4
+  contenido_caja = Controls.GetTextBoxText(caja)
+  numero = "4"
+  Controls.SetTextBoxText(caja, Text.Append(contenido_caja,numero))
+EndSub
+Sub boton5
+  contenido_caja = Controls.GetTextBoxText(caja)
+  numero = "5"
+  Controls.SetTextBoxText(caja, Text.Append(contenido_caja,numero))
+EndSub
+Sub boton6
+  contenido_caja = Controls.GetTextBoxText(caja)
+  numero = "6"
+  Controls.SetTextBoxText(caja, Text.Append(contenido_caja,numero))
+EndSub
+Sub boton7
+  contenido_caja = Controls.GetTextBoxText(caja)
+  numero = "7"
+  Controls.SetTextBoxText(caja, Text.Append(contenido_caja,numero))
+EndSub
+Sub boton8
+  contenido_caja = Controls.GetTextBoxText(caja)
+  numero = "8"
+  Controls.SetTextBoxText(caja, Text.Append(contenido_caja,numero))
+EndSub
+Sub boton9
+  contenido_caja = Controls.GetTextBoxText(caja)
+  numero = "9"
+  Controls.SetTextBoxText(caja, Text.Append(contenido_caja,numero))
+EndSub
+Sub boton0
+  contenido_caja = Controls.GetTextBoxText(caja)
+  numero = "0"
+  Controls.SetTextBoxText(caja, Text.Append(contenido_caja,numero))
+EndSub
+Sub boton11
+  contenido_caja = Controls.GetTextBoxText(caja)
+  simbolo = "."
+  Controls.SetTextBoxText(caja, Text.Append(contenido_caja,simbolo))
+EndSub
+Sub botonMas
+  contenido_caja = Controls.GetTextBoxText(caja)
+  simbolo = "+"
+  Controls.SetTextBoxText(caja, Text.Append(contenido_caja,simbolo))
+EndSub
+Sub botonMenos
+  contenido_caja = Controls.GetTextBoxText(caja)
+  simbolo = "-"
+  Controls.SetTextBoxText(caja, Text.Append(contenido_caja,simbolo))
+EndSub
+Sub botonPor
+  contenido_caja = Controls.GetTextBoxText(caja)
+  simbolo = "*"
+  Controls.SetTextBoxText(caja, Text.Append(contenido_caja,simbolo))
+EndSub
+Sub botonDividir
+  contenido_caja = Controls.GetTextBoxText(caja)
+  simbolo = "/"
+  Controls.SetTextBoxText(caja, Text.Append(contenido_caja,simbolo))
+EndSub
+Sub botonCuadrado
+  contenido_caja = Controls.GetTextBoxText(caja)
+  simbolo = "²"
+  Controls.SetTextBoxText(caja, Text.Append(contenido_caja,simbolo))
+EndSub
+
+
+'subrutina boton limpiar
+Sub botonlimpiar
+  Controls.SetTextBoxText(caja, "")
+EndSub
+
+'aubrutina operaciones
+Sub suma
+  operador1 = Controls.GetTextBoxText(caja)
+  Controls.SetTextBoxText(caja, "")
+  operadorSuma = 1 'activo
+EndSub
+Sub resta
+  operador1 = Controls.GetTextBoxText(caja)
+  Controls.SetTextBoxText(caja, "")
+  operadorResta = 1
+  EndSub
+Sub multiplica
+  operador1 = Controls.GetTextBoxText(caja)
+  Controls.SetTextBoxText(caja, "")
+  operadorMultiplicacion = 1
+EndSub
+Sub division
+  operador1 = Controls.GetTextBoxText(caja)
+  Controls.SetTextBoxText(caja, "")
+  operadorDivison = 1
+EndSub
+
+
+'igual
+Sub botonIgual
+  If operadorSuma = 1 Then
+    operador2 = Controls.GetTextBoxText(caja)
+    total = operador1 + operador2
+    Controls.SetTextBoxText(caja, "")
+    Controls.SetTextBoxText(caja, total)
+    operadorSuma = 0
+  EndIf
+  
+  If operadorResta = 1 Then
+    operador2 = Controls.GetTextBoxText(caja)
+    total = operador1 - operador2
+    Controls.SetTextBoxText(caja, "")
+    Controls.SetTextBoxText(caja, total)
+    operadorResta = 0
+  EndIf
+  
+  If operadorMultiplicacion = 1 Then
+    operador2 = Controls.GetTextBoxText(caja)
+    total = operador1 * operador2
+    Controls.SetTextBoxText(caja, "")
+    Controls.SetTextBoxText(caja, total)
+    operadorMultiplicacion = 0
+  EndIf
+  
+  If operadorDivison = 1 Then
+    operador2 = Controls.GetTextBoxText(caja)
+    total = operador1 / operador2
+    Controls.SetTextBoxText(caja, "")
+    Controls.SetTextBoxText(caja, total)
+    operadorDivison = 0
+    EndIf
+  EndSub
+  
+  
