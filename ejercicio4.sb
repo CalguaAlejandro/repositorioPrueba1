@@ -15,3 +15,5 @@ Turtle.Turn(54)
   Turtle.Turn(72)
   Turtle.Move(100)
   Turtle.Turn(72)
+  
+  'prueba 1
